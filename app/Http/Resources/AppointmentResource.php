@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class TaskResource extends JsonResource
+class AppointmentResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,13 +14,11 @@ class TaskResource extends JsonResource
      */
     public function toArray($request)
     {
-        //transforms the resource into an array made up of the attributes to be converted to JSON
         return [
             'id' => $this->id,
-            'description' => $this->description,
-            'level_id'=> $this->level_id,
-            'user_id'=> $this->user_id,
-            'status'=> $this->status,
+            'title' => $this->title,
+            'startDate'=> $this->startDate,
+            'endDate'=> $this-> endDate,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

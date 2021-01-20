@@ -18,8 +18,5 @@
                 this.$refs.input.focus()
             }
         },
-        created() {
-
-        }
     }
 </script>

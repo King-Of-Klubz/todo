@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Actions\Task\CreateTaskInformation;
 use App\Actions\Task\UpdateTaskInformation;
 use App\Actions\Task\DeleteTask;
+use App\Http\Resources\LevelResource;
 use App\Http\Resources\TaskResource;
 use App\Http\Resources\UserResource;
+use App\Models\Level;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Task;
@@ -23,6 +25,7 @@ class TasksController extends Controller
 
         return Inertia::render('Tasks/Index', [
             'tasks' => TaskResource::collection($task::all()),
+            'levels' => LevelResource::collection(Level::all()),
         ]);
 
     }
@@ -32,6 +35,7 @@ class TasksController extends Controller
         //
         return Inertia::render('Tasks/Create', [
             'task' => null,
+
         ]);
     }
 
@@ -43,12 +47,17 @@ class TasksController extends Controller
         return back(303);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param \App\Models\Region $region
-     * @return \Inertia\Response
-     */
+    public function mDone(Task $item)
+    {
+        $item->status = true;
+        $item->save();
+    }
+
+    public function mToDo(Task $item)
+    {
+        $item->status = false;
+        $item->save();
+    }
     public function show(Task $task)
     {
         //

@@ -1,15 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fda9939c-4b2e-42e0-9021-22fd1f7f9dd5" name="Default Changelist" comment="" />
+    <list default="true" id="fda9939c-4b2e-42e0-9021-22fd1f7f9dd5" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Level/CreateLevel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Level/UpdateLevel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Contracts/Level/CreatesLevel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Contracts/Level/UpdatesLevel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/LevelResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Level.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_07_181447_create_levels_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Task/CreateTaskInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Task/CreateTaskInformation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Task/UpdateTaskInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Task/UpdateTaskInformation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Task/deleteTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Task/deleteTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/TaskResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/TaskResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_08_194557_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_08_194557_create_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/Select.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/Select.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Tasks/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Tasks/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -134,18 +167,28 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1mngc5IS34Sk1zIkUbDXGxXwkby" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Actions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/Actions" />
@@ -167,37 +210,63 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610134846312</updated>
-      <workItem from="1610134847712" duration="26854000" />
+      <workItem from="1610134847712" duration="31037000" />
+      <workItem from="1610648788224" duration="14363000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="559" y="341" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610471607740">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="559" y="341" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1610471607740" />
-    <state x="549" y="93" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610400256340">
+    <state x="643" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1610739028946">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="549" y="93" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610400256340" />
-    <state x="578" y="298" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610472058831">
+    <state x="643" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1610739028946" />
+    <state x="563" y="333" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1610493111968">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="298" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610472058831" />
-    <state x="529" y="253" key="NewPhpClassDialog" timestamp="1610471643878">
+    <state x="563" y="333" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610493111968" />
+    <state x="549" y="93" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610492455679">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="529" y="253" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610471643878" />
-    <state x="660" y="462" key="NewPhpFileDialog" timestamp="1610471807226">
+    <state x="549" y="93" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610492455679" />
+    <state x="578" y="298" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610739154363">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="660" y="462" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610471807226" />
+    <state x="578" y="298" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610739154363" />
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1610808874801">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="0" y="23" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1610808874801" />
+    <state x="529" y="253" key="NewPhpClassDialog" timestamp="1610738885996">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="529" y="253" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610738885996" />
+    <state x="660" y="462" key="NewPhpFileDialog" timestamp="1610492244906">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="660" y="462" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610492244906" />
+    <state x="440" y="272" key="Vcs.Push.Dialog.v2" timestamp="1610808869699">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="272" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1610808869699" />
     <state x="505" y="255" key="run.anything.popup" timestamp="1610471334308">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="255" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1610471334308" />
+    <state x="505" y="254" width="670" height="676" key="search.everywhere.popup" timestamp="1610738955370">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="254" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1610738955370" />
   </component>
 </project>

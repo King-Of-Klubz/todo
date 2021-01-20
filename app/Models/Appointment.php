@@ -2,29 +2,25 @@
 
 namespace App\Models;
 
+use App\Http\Resources\AppointmentResource;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Appointment extends Model
 {
     use HasFactory;
-
     public function user(){
         return $this->belongsTo(\App\Models\User::class);
-    }
-    public function level(){
-        return $this->belongsTo(\App\Models\Level::class);
     }
 
     protected $fillable = [
         'id',
-        'description',
-        'user_id',
-        'level_id',
-        'status'
+        'title',
+        'startDate',
+        'endDate'
     ];
     public function toResource()
     {
-        return new \App\Http\Resources\TaskResource($this);
+        return new AppointmentResource($this);
     }
 }

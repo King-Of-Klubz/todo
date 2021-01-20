@@ -2,7 +2,7 @@
     <app-layout>
         <template #header>
             <h2 class="font-semi-bold text-xl text-gray-800 leading-tight">
-                Team Work Planner
+                Team Appointments
             </h2>
         </template>
 
@@ -14,11 +14,11 @@
                         <div class="mt-8 md:flex">
 
                             <h1 class="text-2xl md:w-5/6">
-                               Team Tasks
+                                Team Tasks
                             </h1>
 
                             <div class="md:w-1/6 text-right">
-                                <button class="bg-gray-800 hover:bg-gray-600 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150"
+                                <button class="bg-gray-800 hover:bg-gray-7000 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150"
                                         @click="addTaskDialog">
                                     Create Task
                                 </button>
@@ -29,46 +29,13 @@
                     </div>
                     <div class="bg-gray-200 bg-opacity-25">
 
-                        <table class="table-auto w-full">
-                            <thead class="text-left">
-                            <tr>
-                                <th class="px-8 py-2">List</th>
-                                <th class="px-8 py-2">Priority</th>
-                                <th class="px-8 py-2">Done</th>
-                                <th class="px-4 py-2">Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <template v-if="tasks.data.length">
-                                <tr v-for="task in tasks.data" :key="task.id">
-                                    <td class="border px-8 py-2">{{ task.description }}</td>
-                                    <td class="border px-8 py-2">{{ task.level_id }}</td>
-                                    <td class="border px-8 py-2">{{ task.status }}</td>
-                                    <td class="border px-4 py-2">
-
-                                        <button class="bg-blue-600 hover:bg-blue-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150" @click="updateTaskDialog(task)">
-                                            Edit
-                                        </button>
-                                        <button class="bg-red-600 hover:bg-red-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150" @click="confirmTaskDeletion(task)">
-                                            Delete
-                                        </button>
-
-                                    </td>
-                                </tr>
-                            </template>
-                            <tr v-else>
-                                <td colspan="2" class="border px-8 py-2">No Tasks</td>
-                            </tr>
-
-                            </tbody>
-                        </table>
                     </div>
                     <div class="p-6 sm:px-8 bg-white border-b border-gray-200">
 
                         <div class="md:flex md:justify-end">
 
                             <div class="md:w-1/6 text-right">
-                                <button class="bg-gray-800 hover:bg-gray-600 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150"
+                                <button class="bg-gray-800 hover:bg-gray-7000 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150"
                                         @click="addTaskDialog">
                                     Create task
                                 </button>
@@ -90,14 +57,14 @@
                 <div class="mt-4">
                     <jet-label for="description" value="Description"/>
                     <jet-input id="description" type="text" class="mt-1 block w-full" v-model="addTaskForm.description"/>
-                    <jet-input-error for="description" class="mt-2"/>
-                </div>
-                <div class="mt-4">
-                    <jet-label for="level_id" value="Priority"/>
-                    <jet-select id="level_id" class="mt-1 block w-full" v-model="addTaskForm.level_id" :options="levels.data"/>
-                    <jet-input-error for="level_id" class="mt-2"/>
                 </div>
 
+                <!-- Person
+                 <div class="col-span-6 sm:col-span-4">
+                    <jet-label for="user_id" value="Person"/>
+                    <jet-select id="user_id" type="select" class="mt-1 block w-full" v-model="addTaskForm.id" :options="Users"/>
+                </div>
+                -->
 
 
             </template>
@@ -129,12 +96,6 @@
 
                     <!-- <jet-input-error :message="updateTaskForm.error('description')" class="mt-2"/> -->
                 </div>
-                <div class="mt-4">
-                    <jet-label for="level_id" value="Priority"/>
-                    <jet-select id="level_id" class="mt-1 block w-full" v-model="addTaskForm.level_id" :options="levels.data"/>
-                    <jet-input-error for="level_id" class="mt-2"/>
-                </div>
-
 
             </template>
 
@@ -211,13 +172,13 @@ export default {
         JetSelect
     },
     props: [
-        'tasks','levels'
+        'appointments'
     ],
     data() {
         return {
             addTaskForm: this.$inertia.form({
                 description: '',
-                level_id:''
+                user_id:''
             }, {
                 bag: 'addTaskForm',
                 resetOnSuccess: true,
@@ -225,7 +186,6 @@ export default {
 
             updateTaskForm: this.$inertia.form({
                 description: '',
-                level_id:''
             }, {
                 bag: 'updateTaskForm',
                 resetOnSuccess: true,

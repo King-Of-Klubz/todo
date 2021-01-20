@@ -3,9 +3,7 @@
 namespace App\Actions\Task;
 
 use App\Models\Task;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
 use App\Contracts\Task\CreatesTaskInformation;
 
 class CreateTaskInformation implements CreatesTaskInformation
@@ -20,12 +18,15 @@ class CreateTaskInformation implements CreatesTaskInformation
     {
         Validator::make($input, [
             'description' => ['required', 'string', 'max:255'],
+            'level_id'=>['required', 'integer'],
+
         ])->validateWithBag('createTaskInformation');
 
         $task = new Task();
 
         return $task->create([
             'description' => $input['description'],
+            'level_id' => $input['level_id']
         ]);
 
     }

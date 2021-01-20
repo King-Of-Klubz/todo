@@ -2837,8 +2837,7 @@ __webpack_require__.r(__webpack_exports__);
     focus: function focus() {
       this.$refs.input.focus();
     }
-  },
-  created: function created() {}
+  }
 });
 
 /***/ }),
@@ -3600,6 +3599,277 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     ApiTokenManager: _ApiTokenManager__WEBPACK_IMPORTED_MODULE_0__.default,
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_1__.default
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Appointments/Index.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Appointments/Index.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+/* harmony import */ var _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../Jetstream/ActionMessage */ "./resources/js/Jetstream/ActionMessage.vue");
+/* harmony import */ var _Jetstream_ActionSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../Jetstream/ActionSection */ "./resources/js/Jetstream/ActionSection.vue");
+/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
+/* harmony import */ var _Jetstream_ConfirmationModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../Jetstream/ConfirmationModal */ "./resources/js/Jetstream/ConfirmationModal.vue");
+/* harmony import */ var _Jetstream_DangerButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../Jetstream/DangerButton */ "./resources/js/Jetstream/DangerButton.vue");
+/* harmony import */ var _Jetstream_DialogModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../Jetstream/DialogModal */ "./resources/js/Jetstream/DialogModal.vue");
+/* harmony import */ var _Jetstream_FormSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../Jetstream/FormSection */ "./resources/js/Jetstream/FormSection.vue");
+/* harmony import */ var _Jetstream_Select__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../Jetstream/Select */ "./resources/js/Jetstream/Select.vue");
+/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
+/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../../Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
+/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
+/* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
+/* harmony import */ var _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../Jetstream/SectionBorder */ "./resources/js/Jetstream/SectionBorder.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__.default,
+    JetActionMessage: _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_1__.default,
+    JetActionSection: _Jetstream_ActionSection__WEBPACK_IMPORTED_MODULE_2__.default,
+    JetButton: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_3__.default,
+    JetConfirmationModal: _Jetstream_ConfirmationModal__WEBPACK_IMPORTED_MODULE_4__.default,
+    JetDangerButton: _Jetstream_DangerButton__WEBPACK_IMPORTED_MODULE_5__.default,
+    JetDialogModal: _Jetstream_DialogModal__WEBPACK_IMPORTED_MODULE_6__.default,
+    JetFormSection: _Jetstream_FormSection__WEBPACK_IMPORTED_MODULE_7__.default,
+    JetInput: _Jetstream_Input__WEBPACK_IMPORTED_MODULE_9__.default,
+    JetInputError: _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_10__.default,
+    JetLabel: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_11__.default,
+    JetSecondaryButton: _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_12__.default,
+    JetSectionBorder: _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_13__.default,
+    JetSelect: _Jetstream_Select__WEBPACK_IMPORTED_MODULE_8__.default
+  },
+  props: ['appointments'],
+  data: function data() {
+    return {
+      addTaskForm: this.$inertia.form({
+        description: '',
+        user_id: ''
+      }, {
+        bag: 'addTaskForm',
+        resetOnSuccess: true
+      }),
+      updateTaskForm: this.$inertia.form({
+        description: ''
+      }, {
+        bag: 'updateTaskForm',
+        resetOnSuccess: true
+      }),
+      deleteTaskForm: this.$inertia.form(),
+      taskToDelete: false,
+      taskId: null,
+      showNewTaskDialog: false,
+      showUpdateTaskDialog: false
+    };
+  },
+  methods: {
+    addTask: function addTask() {
+      var _this = this;
+
+      this.addTaskForm.post('/tasks', {
+        preserveScroll: true
+      }).then(function () {
+        if (!_this.addTaskForm.hasErrors()) {
+          _this.showNewTaskDialog = false;
+        }
+      });
+    },
+    addTaskDialog: function addTaskDialog() {
+      this.showNewTaskDialog = true;
+    },
+    updateTask: function updateTask() {
+      var _this2 = this;
+
+      this.updateTaskForm.put('/tasks/' + this.taskId, {
+        preserveScroll: true
+      }).then(function () {
+        _this2.taskId = null;
+
+        if (!_this2.updateTaskForm.hasErrors()) {
+          _this2.showUpdateTaskDialog = false;
+        }
+      });
+    },
+    updateTaskDialog: function updateTaskDialog(task) {
+      this.updateTaskForm.id = task.id;
+      this.updateTaskForm.description = task.description;
+      this.taskId = task.id;
+      this.showUpdateTaskDialog = true;
+    },
+    confirmTaskDeletion: function confirmTaskDeletion(task) {
+      this.taskToDelete = task;
+    },
+    deleteTask: function deleteTask() {
+      var _this3 = this;
+
+      this.deleteTaskForm["delete"]('/tasks/' + this.taskToDelete.id, {
+        preserveScroll: true,
+        preserveState: true
+      }).then(function () {
+        _this3.taskToDelete = null;
+      });
+    }
   }
 });
 
@@ -5376,6 +5646,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -5407,18 +5688,19 @@ __webpack_require__.r(__webpack_exports__);
     JetSectionBorder: _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_13__.default,
     JetSelect: _Jetstream_Select__WEBPACK_IMPORTED_MODULE_8__.default
   },
-  props: ['tasks'],
+  props: ['tasks', 'levels'],
   data: function data() {
     return {
       addTaskForm: this.$inertia.form({
         description: '',
-        user_id: ''
+        level_id: ''
       }, {
         bag: 'addTaskForm',
         resetOnSuccess: true
       }),
       updateTaskForm: this.$inertia.form({
-        description: ''
+        description: '',
+        level_id: ''
       }, {
         bag: 'updateTaskForm',
         resetOnSuccess: true
@@ -27231,6 +27513,45 @@ component.options.__file = "resources/js/Pages/API/Index.vue"
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Appointments/Index.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/Appointments/Index.vue ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _Index_vue_vue_type_template_id_1530c180___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=1530c180& */ "./resources/js/Pages/Appointments/Index.vue?vue&type=template&id=1530c180&");
+/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Appointments/Index.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Index_vue_vue_type_template_id_1530c180___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Index_vue_vue_type_template_id_1530c180___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Appointments/Index.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Auth/ConfirmPassword.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/Pages/Auth/ConfirmPassword.vue ***!
@@ -28569,6 +28890,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Appointments/Index.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Pages/Appointments/Index.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Appointments/Index.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Auth/ConfirmPassword.vue?vue&type=script&lang=js&":
 /*!******************************************************************************!*\
   !*** ./resources/js/Pages/Auth/ConfirmPassword.vue?vue&type=script&lang=js& ***!
@@ -29489,6 +29826,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => /* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_df56dab8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_df56dab8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=template&id=df56dab8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/API/Index.vue?vue&type=template&id=df56dab8&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Appointments/Index.vue?vue&type=template&id=1530c180&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Appointments/Index.vue?vue&type=template&id=1530c180& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => /* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_1530c180___WEBPACK_IMPORTED_MODULE_0__.render,
+/* harmony export */   "staticRenderFns": () => /* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_1530c180___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_1530c180___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=template&id=1530c180& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Appointments/Index.vue?vue&type=template&id=1530c180&");
 
 
 /***/ }),
@@ -33415,6 +33769,355 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Appointments/Index.vue?vue&type=template&id=1530c180&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Appointments/Index.vue?vue&type=template&id=1530c180& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => /* binding */ render,
+/* harmony export */   "staticRenderFns": () => /* binding */ staticRenderFns
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "app-layout",
+    {
+      scopedSlots: _vm._u([
+        {
+          key: "header",
+          fn: function() {
+            return [
+              _c(
+                "h2",
+                {
+                  staticClass:
+                    "font-semi-bold text-xl text-gray-800 leading-tight"
+                },
+                [_vm._v("\n            Team Appointments\n        ")]
+              )
+            ]
+          },
+          proxy: true
+        }
+      ])
+    },
+    [
+      _vm._v(" "),
+      _c("div", { staticClass: "py-12" }, [
+        _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
+          _c(
+            "div",
+            { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "p-6 sm:px-8 bg-white border-b border-gray-200"
+                },
+                [
+                  _c("div", { staticClass: "mt-8 md:flex" }, [
+                    _c("h1", { staticClass: "text-2xl md:w-5/6" }, [
+                      _vm._v(
+                        "\n                            Team Tasks\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "md:w-1/6 text-right" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "bg-gray-800 hover:bg-gray-7000 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
+                          on: { click: _vm.addTaskDialog }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Create Task\n                            "
+                          )
+                        ]
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "bg-gray-200 bg-opacity-25" }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "p-6 sm:px-8 bg-white border-b border-gray-200"
+                },
+                [
+                  _c("div", { staticClass: "md:flex md:justify-end" }, [
+                    _c("div", { staticClass: "md:w-1/6 text-right" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "bg-gray-800 hover:bg-gray-7000 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
+                          on: { click: _vm.addTaskDialog }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Create task\n                            "
+                          )
+                        ]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("jet-dialog-modal", {
+        attrs: { show: _vm.showNewTaskDialog },
+        on: {
+          close: function($event) {
+            _vm.showNewTaskDialog = false
+          }
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "title",
+            fn: function() {
+              return [_vm._v("\n            Add Task\n        ")]
+            },
+            proxy: true
+          },
+          {
+            key: "content",
+            fn: function() {
+              return [
+                _c(
+                  "div",
+                  { staticClass: "mt-4" },
+                  [
+                    _c("jet-label", {
+                      attrs: { for: "description", value: "Description" }
+                    }),
+                    _vm._v(" "),
+                    _c("jet-input", {
+                      staticClass: "mt-1 block w-full",
+                      attrs: { id: "description", type: "text" },
+                      model: {
+                        value: _vm.addTaskForm.description,
+                        callback: function($$v) {
+                          _vm.$set(_vm.addTaskForm, "description", $$v)
+                        },
+                        expression: "addTaskForm.description"
+                      }
+                    })
+                  ],
+                  1
+                )
+              ]
+            },
+            proxy: true
+          },
+          {
+            key: "footer",
+            fn: function() {
+              return [
+                _c(
+                  "jet-secondary-button",
+                  {
+                    nativeOn: {
+                      click: function($event) {
+                        _vm.showNewTaskDialog = false
+                      }
+                    }
+                  },
+                  [_vm._v("\n                That's All\n            ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "jet-button",
+                  {
+                    staticClass: "ml-2",
+                    class: { "opacity-25": _vm.addTaskForm.processing },
+                    attrs: { disabled: _vm.addTaskForm.processing },
+                    nativeOn: {
+                      click: function($event) {
+                        return _vm.addTask($event)
+                      }
+                    }
+                  },
+                  [_vm._v("\n                Save it\n            ")]
+                )
+              ]
+            },
+            proxy: true
+          }
+        ])
+      }),
+      _vm._v(" "),
+      _c("jet-dialog-modal", {
+        attrs: { show: _vm.showUpdateTaskDialog },
+        on: {
+          close: function($event) {
+            _vm.showUpdateTaskDialog = false
+          }
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "title",
+            fn: function() {
+              return [_vm._v("\n            Update Task\n        ")]
+            },
+            proxy: true
+          },
+          {
+            key: "content",
+            fn: function() {
+              return [
+                _c(
+                  "div",
+                  { staticClass: "mt-4" },
+                  [
+                    _c("jet-label", {
+                      attrs: { for: "description", value: "Description" }
+                    }),
+                    _vm._v(" "),
+                    _c("jet-input", {
+                      staticClass: "mt-1 block w-full",
+                      attrs: { id: "description", type: "text" },
+                      model: {
+                        value: _vm.updateTaskForm.description,
+                        callback: function($$v) {
+                          _vm.$set(_vm.updateTaskForm, "description", $$v)
+                        },
+                        expression: "updateTaskForm.description"
+                      }
+                    })
+                  ],
+                  1
+                )
+              ]
+            },
+            proxy: true
+          },
+          {
+            key: "footer",
+            fn: function() {
+              return [
+                _c(
+                  "jet-secondary-button",
+                  {
+                    nativeOn: {
+                      click: function($event) {
+                        _vm.showUpdateTaskDialog = false
+                      }
+                    }
+                  },
+                  [_vm._v("\n                Never mind\n            ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "jet-button",
+                  {
+                    staticClass: "ml-2",
+                    class: {
+                      "opacity-25": _vm.showUpdateTaskDialog.processing
+                    },
+                    attrs: { disabled: _vm.showUpdateTaskDialog.processing },
+                    nativeOn: {
+                      click: function($event) {
+                        return _vm.updateTask($event)
+                      }
+                    }
+                  },
+                  [_vm._v("\n                Save\n            ")]
+                )
+              ]
+            },
+            proxy: true
+          }
+        ])
+      }),
+      _vm._v(" "),
+      _c("jet-confirmation-modal", {
+        attrs: { show: _vm.taskToDelete },
+        on: {
+          close: function($event) {
+            _vm.taskToDelete = null
+          }
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "title",
+            fn: function() {
+              return [_vm._v("\n            Delete Task\n        ")]
+            },
+            proxy: true
+          },
+          {
+            key: "content",
+            fn: function() {
+              return [
+                _vm._v(
+                  "\n            Are you sure you would like to delete this Task?\n        "
+                )
+              ]
+            },
+            proxy: true
+          },
+          {
+            key: "footer",
+            fn: function() {
+              return [
+                _c(
+                  "jet-secondary-button",
+                  {
+                    nativeOn: {
+                      click: function($event) {
+                        _vm.taskToDelete = null
+                      }
+                    }
+                  },
+                  [_vm._v("\n                Never mind\n            ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "jet-danger-button",
+                  {
+                    staticClass: "ml-2",
+                    class: { "opacity-25": _vm.deleteTaskForm.processing },
+                    attrs: { disabled: _vm.deleteTaskForm.processing },
+                    nativeOn: {
+                      click: function($event) {
+                        return _vm.deleteTask($event)
+                      }
+                    }
+                  },
+                  [_vm._v("\n                Delete\n            ")]
+                )
+              ]
+            },
+            proxy: true
+          }
+        ])
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Auth/ConfirmPassword.vue?vue&type=template&id=475ae21d&":
 /*!***************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Auth/ConfirmPassword.vue?vue&type=template&id=475ae21d& ***!
@@ -35938,7 +36641,7 @@ var render = function() {
                         "button",
                         {
                           staticClass:
-                            "bg-gray-800 hover:bg-gray-7000 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
+                            "bg-gray-800 hover:bg-gray-600 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
                           on: { click: _vm.addTaskDialog }
                         },
                         [
@@ -35958,6 +36661,12 @@ var render = function() {
                     _c("tr", [
                       _c("th", { staticClass: "px-8 py-2" }, [_vm._v("List")]),
                       _vm._v(" "),
+                      _c("th", { staticClass: "px-8 py-2" }, [
+                        _vm._v("Priority")
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "px-8 py-2" }, [_vm._v("Done")]),
+                      _vm._v(" "),
                       _c("th", { staticClass: "px-4 py-2" }, [
                         _vm._v("Actions")
                       ])
@@ -35974,11 +36683,20 @@ var render = function() {
                                 _vm._v(_vm._s(task.description))
                               ]),
                               _vm._v(" "),
+                              _c("td", { staticClass: "border px-8 py-2" }, [
+                                _vm._v(_vm._s(task.level_id))
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "border px-8 py-2" }, [
+                                _vm._v(_vm._s(task.status))
+                              ]),
+                              _vm._v(" "),
                               _c("td", { staticClass: "border px-4 py-2" }, [
                                 _c(
                                   "button",
                                   {
-                                    staticClass: "text-sm mr-2",
+                                    staticClass:
+                                      "bg-blue-600 hover:bg-blue-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
                                     on: {
                                       click: function($event) {
                                         return _vm.updateTaskDialog(task)
@@ -35995,7 +36713,8 @@ var render = function() {
                                 _c(
                                   "button",
                                   {
-                                    staticClass: "text-sm mr-2",
+                                    staticClass:
+                                      "bg-red-600 hover:bg-red-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
                                     on: {
                                       click: function($event) {
                                         return _vm.confirmTaskDeletion(task)
@@ -36039,7 +36758,7 @@ var render = function() {
                         "button",
                         {
                           staticClass:
-                            "bg-gray-800 hover:bg-gray-7000 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
+                            "bg-gray-800 hover:bg-gray-600 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
                           on: { click: _vm.addTaskDialog }
                         },
                         [
@@ -36094,6 +36813,39 @@ var render = function() {
                         },
                         expression: "addTaskForm.description"
                       }
+                    }),
+                    _vm._v(" "),
+                    _c("jet-input-error", {
+                      staticClass: "mt-2",
+                      attrs: { for: "description" }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mt-4" },
+                  [
+                    _c("jet-label", {
+                      attrs: { for: "level_id", value: "Priority" }
+                    }),
+                    _vm._v(" "),
+                    _c("jet-select", {
+                      staticClass: "mt-1 block w-full",
+                      attrs: { id: "level_id", options: _vm.levels.data },
+                      model: {
+                        value: _vm.addTaskForm.level_id,
+                        callback: function($$v) {
+                          _vm.$set(_vm.addTaskForm, "level_id", $$v)
+                        },
+                        expression: "addTaskForm.level_id"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("jet-input-error", {
+                      staticClass: "mt-2",
+                      attrs: { for: "level_id" }
                     })
                   ],
                   1
@@ -36176,6 +36928,34 @@ var render = function() {
                         },
                         expression: "updateTaskForm.description"
                       }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mt-4" },
+                  [
+                    _c("jet-label", {
+                      attrs: { for: "level_id", value: "Priority" }
+                    }),
+                    _vm._v(" "),
+                    _c("jet-select", {
+                      staticClass: "mt-1 block w-full",
+                      attrs: { id: "level_id", options: _vm.levels.data },
+                      model: {
+                        value: _vm.addTaskForm.level_id,
+                        callback: function($$v) {
+                          _vm.$set(_vm.addTaskForm, "level_id", $$v)
+                        },
+                        expression: "addTaskForm.level_id"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("jet-input-error", {
+                      staticClass: "mt-2",
+                      attrs: { for: "level_id" }
                     })
                   ],
                   1
@@ -50475,6 +51255,8 @@ var map = {
 	"./API/ApiTokenManager.vue": "./resources/js/Pages/API/ApiTokenManager.vue",
 	"./API/Index": "./resources/js/Pages/API/Index.vue",
 	"./API/Index.vue": "./resources/js/Pages/API/Index.vue",
+	"./Appointments/Index": "./resources/js/Pages/Appointments/Index.vue",
+	"./Appointments/Index.vue": "./resources/js/Pages/Appointments/Index.vue",
 	"./Auth/ConfirmPassword": "./resources/js/Pages/Auth/ConfirmPassword.vue",
 	"./Auth/ConfirmPassword.vue": "./resources/js/Pages/Auth/ConfirmPassword.vue",
 	"./Auth/ForgotPassword": "./resources/js/Pages/Auth/ForgotPassword.vue",

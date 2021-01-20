@@ -24,6 +24,9 @@ class User extends Authenticatable
     public function tasks(){
         return $this->hasMany(Task::class);
     }
+    public function appointments(){
+        return $this->hasMany(Appointment::class);
+    }
     protected $fillable = [
         'name', 'email', 'password',
     ];
