@@ -20,13 +20,12 @@ class UpdateTaskInformation implements UpdatesTaskInformation
         Validator::make($input, [
             'description' => ['required', 'string', 'max:255'],
             'level_id'=>['required', 'integer'],
-            'status'=>['required','boolean',]
+
         ])->validateWithBag('updateTaskInformation');
 
         $task->fill([
             'description' => $input['description'],
-            'level_id' => $input['leve_id'],
-            'status' => $input['status']
+            'level_id' => $input['level_id'],
         ])->save();
     }
 }

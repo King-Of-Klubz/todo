@@ -36707,9 +36707,16 @@ var render = function() {
                                 _vm._v(_vm._s(task.description))
                               ]),
                               _vm._v(" "),
-                              _c("td", { staticClass: "border px-8 py-2" }, [
-                                _vm._v(_vm._s(task.title) + " ")
-                              ]),
+                              _c(
+                                "td",
+                                {
+                                  class:
+                                    "border px-8 py-2 bg-" +
+                                    task.color +
+                                    "-400 text-white font-semi-bold"
+                                },
+                                [_vm._v(_vm._s(task.title) + " ")]
+                              ),
                               _vm._v(" "),
                               _c("td", { staticClass: "border px-8 py-2" }, [
                                 _vm._v(_vm._s(task.status))
