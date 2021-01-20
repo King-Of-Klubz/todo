@@ -32,19 +32,23 @@
                         <table class="table-auto w-full">
                             <thead class="text-left">
                             <tr>
-                                <th class="px-8 py-2">List</th>
-                                <th class="px-8 py-2">Priority</th>
-                                <th class="px-8 py-2">Done</th>
-                                <th class="px-4 py-2">Actions</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">List</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Done</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="bg-white divide-y divide-gray-200">
                             <template v-if="tasks.data.length">
                                 <tr v-for="task in tasks.data" :key="task.id">
-                                    <td class="border px-8 py-2">{{ task.description }}</td>
-                                    <td :class="'border px-8 py-2 bg-'+ task.color +'-400 text-white font-semi-bold' " >{{ task.title }} </td>
-                                    <td class="border px-8 py-2">{{ task.status }}</td>
-                                    <td class="border px-4 py-2">
+                                    <td class="px-6 py-4 whitespace-nowrap">{{ task.description }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap" >
+                                        <span :class="'px-2 inline-flex text-md leading-7 font-semibold rounded-full '+ task.color">
+                                                {{ task.title }}
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">{{ task.status }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
 
                                         <button class="bg-blue-600 hover:bg-blue-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150" @click="updateTaskDialog(task)">
                                             Edit

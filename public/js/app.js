@@ -5664,6 +5664,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -36683,82 +36687,126 @@ var render = function() {
                 _c("table", { staticClass: "table-auto w-full" }, [
                   _c("thead", { staticClass: "text-left" }, [
                     _c("tr", [
-                      _c("th", { staticClass: "px-8 py-2" }, [_vm._v("List")]),
+                      _c(
+                        "th",
+                        {
+                          staticClass:
+                            "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        },
+                        [_vm._v("List")]
+                      ),
                       _vm._v(" "),
-                      _c("th", { staticClass: "px-8 py-2" }, [
-                        _vm._v("Priority")
-                      ]),
+                      _c(
+                        "th",
+                        {
+                          staticClass:
+                            "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        },
+                        [_vm._v("Priority")]
+                      ),
                       _vm._v(" "),
-                      _c("th", { staticClass: "px-8 py-2" }, [_vm._v("Done")]),
+                      _c(
+                        "th",
+                        {
+                          staticClass:
+                            "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        },
+                        [_vm._v("Done")]
+                      ),
                       _vm._v(" "),
-                      _c("th", { staticClass: "px-4 py-2" }, [
-                        _vm._v("Actions")
-                      ])
+                      _c(
+                        "th",
+                        {
+                          staticClass:
+                            "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        },
+                        [_vm._v("Actions")]
+                      )
                     ])
                   ]),
                   _vm._v(" "),
                   _c(
                     "tbody",
+                    { staticClass: "bg-white divide-y divide-gray-200" },
                     [
                       _vm.tasks.data.length
                         ? _vm._l(_vm.tasks.data, function(task) {
                             return _c("tr", { key: task.id }, [
-                              _c("td", { staticClass: "border px-8 py-2" }, [
-                                _vm._v(_vm._s(task.description))
-                              ]),
+                              _c(
+                                "td",
+                                { staticClass: "px-6 py-4 whitespace-nowrap" },
+                                [_vm._v(_vm._s(task.description))]
+                              ),
                               _vm._v(" "),
                               _c(
                                 "td",
-                                {
-                                  class:
-                                    "border px-8 py-2 bg-" +
-                                    task.color +
-                                    "-400 text-white font-semi-bold"
-                                },
-                                [_vm._v(_vm._s(task.title) + " ")]
+                                { staticClass: "px-6 py-4 whitespace-nowrap" },
+                                [
+                                  _c(
+                                    "span",
+                                    {
+                                      class:
+                                        "px-2 inline-flex text-md leading-7 font-semibold rounded-full " +
+                                        task.color
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                            " +
+                                          _vm._s(task.title) +
+                                          "\n                                    "
+                                      )
+                                    ]
+                                  )
+                                ]
                               ),
                               _vm._v(" "),
-                              _c("td", { staticClass: "border px-8 py-2" }, [
-                                _vm._v(_vm._s(task.status))
-                              ]),
+                              _c(
+                                "td",
+                                { staticClass: "px-6 py-4 whitespace-nowrap" },
+                                [_vm._v(_vm._s(task.status))]
+                              ),
                               _vm._v(" "),
-                              _c("td", { staticClass: "border px-4 py-2" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "bg-blue-600 hover:bg-blue-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.updateTaskDialog(task)
+                              _c(
+                                "td",
+                                { staticClass: "px-6 py-4 whitespace-nowrap" },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "bg-blue-600 hover:bg-blue-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.updateTaskDialog(task)
+                                        }
                                       }
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                        Edit\n                                    "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "bg-red-600 hover:bg-red-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.confirmTaskDeletion(task)
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        Edit\n                                    "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "bg-red-600 hover:bg-red-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.confirmTaskDeletion(task)
+                                        }
                                       }
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                        Delete\n                                    "
-                                    )
-                                  ]
-                                )
-                              ])
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        Delete\n                                    "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
                             ])
                           })
                         : _c("tr", [
