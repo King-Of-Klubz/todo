@@ -13,6 +13,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use Inertia\Inertia;
 use phpDocumentor\Reflection\Types\Collection;
@@ -20,11 +21,14 @@ use phpDocumentor\Reflection\Types\Collection;
 class TasksController extends Controller
 {
 
-    public function index(Task $task)
+    public function index()
     {
+        $task = DB::table('tasks')
+            ->join('levels','levels.id','=','tasks.level_id')
+            ->select('*')->get();
 
         return Inertia::render('Tasks/Index', [
-            'tasks' => TaskResource::collection($task::all()),
+            'tasks' => TaskResource::collection($task),
             'levels' => LevelResource::collection(Level::all()),
         ]);
 

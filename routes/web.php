@@ -13,8 +13,6 @@ use Inertia\Inertia;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -23,6 +21,10 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+*/
+
+
+
 /*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -38,6 +40,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
  */
 Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
     Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+        Route::get('/', [\App\Http\Controllers\TasksController::class, 'index'])->name('home');
         Route::get('/dashboard', [\App\Http\Controllers\TasksController::class, 'index'])->name('dashboard');
         Route::get('tasks/{task}/edit', [\App\Http\Controllers\TasksController::class, 'edit'])->name('tasks.edit');
         Route::get('tasks/create', [\App\Http\Controllers\TasksController::class, 'create'])->name('tasks.create');

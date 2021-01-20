@@ -42,7 +42,7 @@
                             <template v-if="tasks.data.length">
                                 <tr v-for="task in tasks.data" :key="task.id">
                                     <td class="border px-8 py-2">{{ task.description }}</td>
-                                    <td class="border px-8 py-2">{{ task.level_id }}</td>
+                                    <td class="border px-8 py-2">{{ task.title }} </td>
                                     <td class="border px-8 py-2">{{ task.status }}</td>
                                     <td class="border px-4 py-2">
 

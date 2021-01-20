@@ -4105,6 +4105,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -34500,6 +34507,23 @@ var render = function() {
               )
             ],
             1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex items-center justify-center mt-4" },
+            [
+              _c(
+                "inertia-link",
+                {
+                  staticClass:
+                    "underline text-sm text-gray-600 hover:text-gray-900",
+                  attrs: { href: _vm.route("register") }
+                },
+                [_vm._v("\n                Register Me\n            ")]
+              )
+            ],
+            1
           )
         ]
       )
@@ -36684,7 +36708,7 @@ var render = function() {
                               ]),
                               _vm._v(" "),
                               _c("td", { staticClass: "border px-8 py-2" }, [
-                                _vm._v(_vm._s(task.level_id))
+                                _vm._v(_vm._s(task.title) + " ")
                               ]),
                               _vm._v(" "),
                               _c("td", { staticClass: "border px-8 py-2" }, [

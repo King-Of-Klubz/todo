@@ -20,19 +20,19 @@ class DatabaseSeeder extends Seeder
         DB::table('levels')->insert(
           [
               'title'=>'Low',
-              'color'=>'primary'
+              'color'=>'green'
           ]
         );
         DB::table('levels')->insert(
             [
                 'title'=>'Normal',
-                 'color'=>'secondary'
+                 'color'=>'orange'
             ]
         );
         DB::table('levels')->insert(
             [
                 'title'=>'High',
-                'color'=>'danger'
+                'color'=>'red'
             ]
         );
     }
