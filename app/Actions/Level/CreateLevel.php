@@ -17,6 +17,7 @@ class CreateLevel implements CreatesLevel
             'title' => ['required', 'string', 'max:255'],
 
 
+
         ])->validateWithBag('createLevel');
 
         $level = new Level();

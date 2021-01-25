@@ -25,8 +25,8 @@ class TasksController extends Controller
     {
         $task = DB::table('tasks')
             ->join('levels','levels.id','=','tasks.level_id')
-            ->select('*')->get();
-
+            ->select('tasks.id', 'levels.title','levels.color','tasks.description','tasks.status','tasks.level_id')->get();
+//dd($task);
         return Inertia::render('Tasks/Index', [
             'tasks' => TaskResource::collection($task),
             'levels' => LevelResource::collection(Level::all()),
@@ -70,11 +70,6 @@ class TasksController extends Controller
         ]);
     }
 
-
-    public function edit(Task $task)
-    {
-        //
-    }
 
 
     public function update(Request $request, Task $task)

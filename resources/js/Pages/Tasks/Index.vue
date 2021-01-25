@@ -248,10 +248,6 @@ export default {
         addTask() {
             this.addTaskForm.post('/tasks', {
                 preserveScroll: true
-            }).then(() => {
-                if (!this.addTaskForm.hasErrors()) {
-                    this.showNewTaskDialog = false;
-                }
             })
         },
         addTaskDialog() {
@@ -260,16 +256,12 @@ export default {
         updateTask() {
             this.updateTaskForm.put('/tasks/' + this.taskId, {
                 preserveScroll: true
-            }).then(() => {
-                this.taskId = null;
-                if (!this.updateTaskForm.hasErrors()) {
-                    this.showUpdateTaskDialog = false
-                }
             })
         },
         updateTaskDialog(task) {
             this.updateTaskForm.id = task.id
             this.updateTaskForm.description = task.description
+            this.updateTaskForm.level_id = task.level_id
             this.taskId = task.id
             this.showUpdateTaskDialog = true
         },
