@@ -20,8 +20,8 @@ class TaskResource extends JsonResource
             'description' => $this->description,
             'level_id'=> $this->level_id,
             'status'=> $this->status,
-            'title'=> $this->title,
-            'color'=> $this->color
+            'title'=> $this->level->title,
+            'color'=> $this->level->color
         ];
     }
 }

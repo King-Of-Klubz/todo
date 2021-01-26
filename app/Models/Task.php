@@ -13,8 +13,9 @@ class Task extends Model
         return $this->belongsTo(\App\Models\User::class);
     }
     public function level(){
-        return $this->belongsTo(\App\Models\Level::class);
+        return $this->belongsTo(\App\Models\Level::class, 'level_id');
     }
+
 
     protected $fillable = [
         'id',

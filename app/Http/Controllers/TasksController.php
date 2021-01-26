@@ -23,12 +23,8 @@ class TasksController extends Controller
 
     public function index()
     {
-        $task = DB::table('tasks')
-            ->join('levels','levels.id','=','tasks.level_id')
-            ->select('tasks.id', 'levels.title','levels.color','tasks.description','tasks.status','tasks.level_id')->get();
-//dd($task);
         return Inertia::render('Tasks/Index', [
-            'tasks' => TaskResource::collection($task),
+            'tasks' => TaskResource::collection( Task::all()),
             'levels' => LevelResource::collection(Level::all()),
         ]);
 

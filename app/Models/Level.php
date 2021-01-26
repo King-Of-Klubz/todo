@@ -10,7 +10,7 @@ class Level extends Model
 {
     use HasFactory;
     public function tasks(){
-        return $this->hasMany(Task::class);
+        return $this->belongsTo(Task::class, 'level_id');
     }
     protected $fillable = [
         'id',

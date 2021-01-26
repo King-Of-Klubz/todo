@@ -9,7 +9,7 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <vc-calendar is-expanded/>
+                    <vc-calendar is-expanded :min-date="new Date()" :attributes="attributes"/>
                 </div>
             </div>
         </div>
@@ -56,73 +56,37 @@ export default {
         'appointments'
     ],
     data() {
+        const todos = [
+            {
+                description: 'Take Noah to basketball practice.',
+                isComplete: false,
+                dates: {weekdays: 6}, // Every Friday
+                color: 'red',
+            },
+        ];
         return {
-            addTaskForm: this.$inertia.form({
-                description: '',
-                user_id:''
-            }, {
-                bag: 'addTaskForm',
-                resetOnSuccess: true,
-            }),
-
-            updateTaskForm: this.$inertia.form({
-                description: '',
-            }, {
-                bag: 'updateTaskForm',
-                resetOnSuccess: true,
-            }),
-
-            deleteTaskForm: this.$inertia.form(),
-            taskToDelete: false,
-
-            taskId: null,
-            showNewTaskDialog: false,
-            showUpdateTaskDialog: false,
-
-        }
+            incId: todos.length,
+            todos,
+        };
     },
-    methods: {
-        addTask() {
-            this.addTaskForm.post('/tasks', {
-                preserveScroll: true
-            }).then(() => {
-                if (!this.addTaskForm.hasErrors()) {
-                    this.showNewTaskDialog = false;
-                }
-            })
-        },
-        addTaskDialog() {
-            this.showNewTaskDialog = true
-        },
-        updateTask() {
-            this.updateTaskForm.put('/tasks/' + this.taskId, {
-                preserveScroll: true
-            }).then(() => {
-                this.taskId = null;
-                if (!this.updateTaskForm.hasErrors()) {
-                    this.showUpdateTaskDialog = false
-                }
-            })
-        },
-        updateTaskDialog(task) {
-            this.updateTaskForm.id = task.id
-            this.updateTaskForm.description = task.description
-            this.taskId = task.id
-            this.showUpdateTaskDialog = true
-        },
-        confirmTaskDeletion(task) {
-            this.taskToDelete = task
-        },
+    computed: {
+        attributes() {
+            return [
+                // Attributes for todos
 
-        deleteTask() {
-            this.deleteTaskForm.delete('/tasks/' + this.taskToDelete.id, {
-                preserveScroll: true,
-                preserveState: true,
-            }).then(() => {
-                this.taskToDelete = null
-            })
+                ...this.todos.map(todo => ({
+                    dates: todo.dates,
+                    bar: {
+                        color: todo.color,
+                        class: todo.isComplete ? 'opacity-75' : '',
+                    },
+                    popover: {
+                        label: todo.description,
+                    },
+                    customData: todo,
+                })),
+            ];
         },
-
-    }
+    },
 }
 </script>

@@ -3633,6 +3633,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
 /* harmony import */ var _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../Jetstream/SectionBorder */ "./resources/js/Jetstream/SectionBorder.vue");
 /* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 //
 //
 //
@@ -3687,73 +3699,35 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: ['appointments'],
   data: function data() {
+    var todos = [{
+      description: 'Take Noah to basketball practice.',
+      isComplete: false,
+      dates: {
+        weekdays: 6
+      },
+      // Every Friday
+      color: 'red'
+    }];
     return {
-      addTaskForm: this.$inertia.form({
-        description: '',
-        user_id: ''
-      }, {
-        bag: 'addTaskForm',
-        resetOnSuccess: true
-      }),
-      updateTaskForm: this.$inertia.form({
-        description: ''
-      }, {
-        bag: 'updateTaskForm',
-        resetOnSuccess: true
-      }),
-      deleteTaskForm: this.$inertia.form(),
-      taskToDelete: false,
-      taskId: null,
-      showNewTaskDialog: false,
-      showUpdateTaskDialog: false
+      incId: todos.length,
+      todos: todos
     };
   },
-  methods: {
-    addTask: function addTask() {
-      var _this = this;
-
-      this.addTaskForm.post('/tasks', {
-        preserveScroll: true
-      }).then(function () {
-        if (!_this.addTaskForm.hasErrors()) {
-          _this.showNewTaskDialog = false;
-        }
-      });
-    },
-    addTaskDialog: function addTaskDialog() {
-      this.showNewTaskDialog = true;
-    },
-    updateTask: function updateTask() {
-      var _this2 = this;
-
-      this.updateTaskForm.put('/tasks/' + this.taskId, {
-        preserveScroll: true
-      }).then(function () {
-        _this2.taskId = null;
-
-        if (!_this2.updateTaskForm.hasErrors()) {
-          _this2.showUpdateTaskDialog = false;
-        }
-      });
-    },
-    updateTaskDialog: function updateTaskDialog(task) {
-      this.updateTaskForm.id = task.id;
-      this.updateTaskForm.description = task.description;
-      this.taskId = task.id;
-      this.showUpdateTaskDialog = true;
-    },
-    confirmTaskDeletion: function confirmTaskDeletion(task) {
-      this.taskToDelete = task;
-    },
-    deleteTask: function deleteTask() {
-      var _this3 = this;
-
-      this.deleteTaskForm["delete"]('/tasks/' + this.taskToDelete.id, {
-        preserveScroll: true,
-        preserveState: true
-      }).then(function () {
-        _this3.taskToDelete = null;
-      });
+  computed: {
+    attributes: function attributes() {
+      return _toConsumableArray(this.todos.map(function (todo) {
+        return {
+          dates: todo.dates,
+          bar: {
+            color: todo.color,
+            "class": todo.isComplete ? 'opacity-75' : ''
+          },
+          popover: {
+            label: todo.description
+          },
+          customData: todo
+        };
+      }));
     }
   }
 });
@@ -33738,7 +33712,15 @@ var render = function() {
           _c(
             "div",
             { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
-            [_c("vc-calendar", { attrs: { "is-expanded": "" } })],
+            [
+              _c("vc-calendar", {
+                attrs: {
+                  "is-expanded": "",
+                  "min-date": new Date(),
+                  attributes: _vm.attributes
+                }
+              })
+            ],
             1
           )
         ])
@@ -51220,6 +51202,6 @@ webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*$";
 /******/ 	
 /************************************************************************/
 /******/ 	// run startup
-/******/ 	return __webpack_require__.x();
+/******/ 	__webpack_require__.x();
 /******/ })()
 ;

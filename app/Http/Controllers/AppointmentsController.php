@@ -7,17 +7,20 @@ use App\Models\Appointment;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
+
 class AppointmentsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
-    public function index(Appointment $appointment)
+    public function index()
     {
+        $appointment = Appointment::all();
+        //dd($appointment);
         return Inertia::render('Appointments/Index', [
-            'appointments' => AppointmentResource::collection($appointment::all()),
+            'appointments' => AppointmentResource::collection($appointment),
         ]);
     }
 
