@@ -12,6 +12,7 @@
                     <vc-calendar is-expanded :min-date="new Date()" :attributes="attributes"/>
                 </div>
             </div>
+            <inertia-table></inertia-table>
         </div>
 
     </app-layout>
@@ -33,6 +34,7 @@ import JetLabel from './../../Jetstream/Label'
 import JetSecondaryButton from './../../Jetstream/SecondaryButton'
 import JetSectionBorder from './../../Jetstream/SectionBorder'
 import Welcome from "@/Jetstream/Welcome";
+import InertiaTable from 'inertia-table';
 
 export default {
     components: {
@@ -51,6 +53,7 @@ export default {
         JetSecondaryButton,
         JetSectionBorder,
         JetSelect,
+        InertiaTable
     },
     props: [
         'appointments'

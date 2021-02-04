@@ -4,7 +4,7 @@
 namespace App\Actions\Task;
 use App\Contracts\Task\DeletesTask;
 
-class DeleteTask implements DeletesTask
+class DeleteTaskInformation implements DeletesTask
 {
  public function delete($task){
 

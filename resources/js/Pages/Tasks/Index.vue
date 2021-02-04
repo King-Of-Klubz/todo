@@ -66,6 +66,8 @@
 
                             </tbody>
                         </table>
+                        <inertia-table
+                        ></inertia-table>
                     </div>
                     <div class="p-6 sm:px-8 bg-white border-b border-gray-200">
 
@@ -130,12 +132,13 @@
                 <div class="mt-4">
                     <jet-label for="description" value="Description"/>
                     <jet-input id="description" type="text" class="mt-1 block w-full" v-model="updateTaskForm.description"/>
+                    <jet-input-error for="description" class="mt-2"/>
 
                     <!-- <jet-input-error :message="updateTaskForm.error('description')" class="mt-2"/> -->
                 </div>
                 <div class="mt-4">
                     <jet-label for="level_id" value="Priority"/>
-                    <jet-select id="level_id" class="mt-1 block w-full" v-model="addTaskForm.level_id" :options="levels.data"/>
+                    <jet-select id="level_id" class="mt-1 block w-full" v-model="updateTaskForm.level_id" :options="levels.data"/>
                     <jet-input-error for="level_id" class="mt-2"/>
                 </div>
 
@@ -196,6 +199,7 @@ import JetInputError from './../../Jetstream/InputError'
 import JetLabel from './../../Jetstream/Label'
 import JetSecondaryButton from './../../Jetstream/SecondaryButton'
 import JetSectionBorder from './../../Jetstream/SectionBorder'
+import InertiaTable from 'inertia-table'
 
 export default {
     components: {
@@ -212,7 +216,8 @@ export default {
         JetLabel,
         JetSecondaryButton,
         JetSectionBorder,
-        JetSelect
+        JetSelect,
+        InertiaTable
     },
     props: [
         'tasks','levels'

@@ -9,6 +9,7 @@ import VueMarkdownEditor from '@kangc/v-md-editor';
 import '@kangc/v-md-editor/lib/style/base-editor.css';
 import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js';
 import VCalendar from 'v-calendar';
+import InertiaTable from 'inertia-table'
 
 // Use v-calendar & v-date-picker components
 Vue.use(VCalendar, {
@@ -20,6 +21,8 @@ Vue.use(VueMarkdownEditor);
 Vue.mixin({ methods: { route } });
 Vue.use(InertiaPlugin);
 Vue.use(PortalVue);
+Vue.use(InertiaTable);
+
 
 
 

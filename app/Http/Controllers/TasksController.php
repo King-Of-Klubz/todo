@@ -4,24 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Actions\Task\CreateTaskInformation;
 use App\Actions\Task\UpdateTaskInformation;
-use App\Actions\Task\DeleteTask;
+use App\Actions\Task\DeleteTaskInformation;
 use App\Http\Resources\LevelResource;
 use App\Http\Resources\TaskResource;
-use App\Http\Resources\UserResource;
 use App\Models\Level;
-use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Task;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\URL;
 use Inertia\Inertia;
-use phpDocumentor\Reflection\Types\Collection;
+use Inertia\Response;
 
 class TasksController extends Controller
 {
 
-    public function index()
+    public function index():Response
     {
         return Inertia::render('Tasks/Index', [
             'tasks' => TaskResource::collection( Task::all()),
@@ -30,7 +25,7 @@ class TasksController extends Controller
 
     }
 
-    public function create()
+    public function create():Response
     {
         //
         return Inertia::render('Tasks/Create', [
@@ -47,20 +42,8 @@ class TasksController extends Controller
         return back(303);
     }
 
-    public function mDone(Task $item)
-    {
-        $item->status = true;
-        $item->save();
-    }
-
-    public function mToDo(Task $item)
-    {
-        $item->status = false;
-        $item->save();
-    }
     public function show(Task $task)
     {
-        //
         return Inertia::render('Tasks/Show', [
             'task' => $task->toResource(),
         ]);
@@ -78,8 +61,7 @@ class TasksController extends Controller
 
     public function destroy(Request $request, Task $task)
     {
-        //
-        app(DeleteTask::class)->delete($task);
+        app(DeleteTaskInformation::class)->delete($task);
 
         return back(303);
     }
