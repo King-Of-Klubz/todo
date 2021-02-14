@@ -32,9 +32,9 @@
                         <table class="table-auto w-full">
                             <thead class="text-left">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">List</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Done</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                             </tr>
                             </thead>
@@ -47,32 +47,46 @@
                                                 {{ task.title }}
                                         </span>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">{{ task.status }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap" ><jet-select  v-model="addTaskForm.level_id" :options="levels.data"/></td>
+
                                     <td class="px-6 py-4 whitespace-nowrap">
 
                                         <button class="bg-blue-600 hover:bg-blue-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150" @click="updateTaskDialog(task)">
-                                            Edit
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                            </svg>
                                         </button>
-                                        <button class="bg-red-600 hover:bg-red-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150" @click="confirmTaskDeletion(task)">
-                                            Delete
+
+                                        <button class="bg-red-600 hover:bg-red-400 py-2 px-4 rounded transition ease-in-out duration-150" @click="confirmTaskDeletion(task)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
                                         </button>
 
                                     </td>
                                 </tr>
                             </template>
                             <tr v-else>
-                                <td colspan="2" class="border px-8 py-2">No Tasks</td>
+                                <td colspan="6" class="border px-8 py-2 ">No Tasks </td>
                             </tr>
 
                             </tbody>
                         </table>
-                        <inertia-table
-                        ></inertia-table>
+
+                            <inertia-table
+                                :data="tasks.data"
+                                id="id"
+                                :order="order"
+                                :filters="filters"
+                                :columns="columns"
+                                routeName="tasks"
+                                createLink="tasks.create"
+                                @item-selected="updateTaskDialog">
+                            </inertia-table>
                     </div>
                     <div class="p-6 sm:px-8 bg-white border-b border-gray-200">
 
                         <div class="md:flex md:justify-end">
-
                             <div class="md:w-1/6 text-right">
                                 <button class="bg-gray-800 hover:bg-gray-600 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150"
                                         @click="addTaskDialog">
@@ -194,6 +208,7 @@ import JetDangerButton from './../../Jetstream/DangerButton'
 import JetDialogModal from './../../Jetstream/DialogModal'
 import JetFormSection from './../../Jetstream/FormSection'
 import JetSelect from './../../Jetstream/Select'
+import JetDropdown from './../../Jetstream/Dropdown'
 import JetInput from './../../Jetstream/Input'
 import JetInputError from './../../Jetstream/InputError'
 import JetLabel from './../../Jetstream/Label'
@@ -217,13 +232,18 @@ export default {
         JetSecondaryButton,
         JetSectionBorder,
         JetSelect,
-        InertiaTable
+        InertiaTable,
+        JetDropdown
     },
-    props: [
-        'tasks','levels'
-    ],
+    props: {
+        tasks:Array,
+        levels:Array,
+        filters: Object,
+        order: Object,
+    },
     data() {
         return {
+            columns: ["description","completed"],
             addTaskForm: this.$inertia.form({
                 description: '',
                 level_id:''
@@ -250,6 +270,9 @@ export default {
         }
     },
     methods: {
+        show(task) {
+            this.$inertia.replace(this.route('tasks.update', task.id));
+        },
         addTask() {
             this.addTaskForm.post('/tasks', {
                 preserveScroll: true

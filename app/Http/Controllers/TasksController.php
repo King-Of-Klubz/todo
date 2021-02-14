@@ -36,13 +36,12 @@ class TasksController extends Controller
 
     public function store(Request $request)
     {
-        //
         app(CreateTaskInformation::class)->create($request->all());
 
         return back(303);
     }
 
-    public function show(Task $task)
+    public function show(Task $task):Response
     {
         return Inertia::render('Tasks/Show', [
             'task' => $task->toResource(),

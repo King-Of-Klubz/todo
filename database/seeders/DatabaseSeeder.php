@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Team::factory(10)->create();
+        Team::factory(3)->create();
 
         DB::table('levels')->insert(
           [

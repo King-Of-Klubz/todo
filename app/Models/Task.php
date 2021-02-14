@@ -22,7 +22,7 @@ class Task extends Model
         'description',
         'user_id',
         'level_id',
-        'status'
+        'completed'
     ];
     public function toResource()
     {

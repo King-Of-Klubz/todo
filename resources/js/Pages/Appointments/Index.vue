@@ -12,7 +12,8 @@
                     <vc-calendar is-expanded :min-date="new Date()" :attributes="attributes"/>
                 </div>
             </div>
-            <inertia-table></inertia-table>
+            <inertia-table
+            ></inertia-table>
         </div>
 
     </app-layout>

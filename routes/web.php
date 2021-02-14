@@ -48,7 +48,6 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
         Route::get('/tasks/{task}', [\App\Http\Controllers\TasksController::class, 'show'])->name('tasks.show');
         Route::put('/tasks/{task}', [\App\Http\Controllers\TasksController::class, 'update'])->name('tasks.update');
         Route::delete('/tasks/{task}', [\App\Http\Controllers\TasksController::class, 'destroy'])->name('tasks.destroy');
-
         Route::get('appointments',[\App\Http\Controllers\AppointmentsController::class,'index'])->name('appointments');
 
 

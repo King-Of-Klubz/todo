@@ -3667,6 +3667,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 
 
@@ -5344,13 +5345,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_DialogModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../Jetstream/DialogModal */ "./resources/js/Jetstream/DialogModal.vue");
 /* harmony import */ var _Jetstream_FormSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../Jetstream/FormSection */ "./resources/js/Jetstream/FormSection.vue");
 /* harmony import */ var _Jetstream_Select__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../Jetstream/Select */ "./resources/js/Jetstream/Select.vue");
-/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
-/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../../Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
-/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
-/* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
-/* harmony import */ var _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../Jetstream/SectionBorder */ "./resources/js/Jetstream/SectionBorder.vue");
-/* harmony import */ var inertia_table__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! inertia-table */ "./node_modules/inertia-table/dist/inertia-table.common.js");
-/* harmony import */ var inertia_table__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(inertia_table__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _Jetstream_Dropdown__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../Jetstream/Dropdown */ "./resources/js/Jetstream/Dropdown.vue");
+/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../../Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
+/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
+/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
+/* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
+/* harmony import */ var _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../../Jetstream/SectionBorder */ "./resources/js/Jetstream/SectionBorder.vue");
+/* harmony import */ var inertia_table__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! inertia-table */ "./node_modules/inertia-table/dist/inertia-table.common.js");
+/* harmony import */ var inertia_table__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(inertia_table__WEBPACK_IMPORTED_MODULE_15__);
 //
 //
 //
@@ -5537,6 +5539,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -5562,17 +5579,24 @@ __webpack_require__.r(__webpack_exports__);
     JetDangerButton: _Jetstream_DangerButton__WEBPACK_IMPORTED_MODULE_5__.default,
     JetDialogModal: _Jetstream_DialogModal__WEBPACK_IMPORTED_MODULE_6__.default,
     JetFormSection: _Jetstream_FormSection__WEBPACK_IMPORTED_MODULE_7__.default,
-    JetInput: _Jetstream_Input__WEBPACK_IMPORTED_MODULE_9__.default,
-    JetInputError: _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_10__.default,
-    JetLabel: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_11__.default,
-    JetSecondaryButton: _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_12__.default,
-    JetSectionBorder: _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_13__.default,
+    JetInput: _Jetstream_Input__WEBPACK_IMPORTED_MODULE_10__.default,
+    JetInputError: _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_11__.default,
+    JetLabel: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_12__.default,
+    JetSecondaryButton: _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_13__.default,
+    JetSectionBorder: _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_14__.default,
     JetSelect: _Jetstream_Select__WEBPACK_IMPORTED_MODULE_8__.default,
-    InertiaTable: (inertia_table__WEBPACK_IMPORTED_MODULE_14___default())
+    InertiaTable: (inertia_table__WEBPACK_IMPORTED_MODULE_15___default()),
+    JetDropdown: _Jetstream_Dropdown__WEBPACK_IMPORTED_MODULE_9__.default
   },
-  props: ['tasks', 'levels'],
+  props: {
+    tasks: Array,
+    levels: Array,
+    filters: Object,
+    order: Object
+  },
   data: function data() {
     return {
+      columns: ["description", "completed"],
       addTaskForm: this.$inertia.form({
         description: '',
         level_id: ''
@@ -5595,6 +5619,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    show: function show(task) {
+      this.$inertia.replace(this.route('tasks.update', task.id));
+    },
     addTask: function addTask() {
       this.addTaskForm.post('/tasks', {
         preserveScroll: true
@@ -59166,7 +59193,7 @@ var render = function() {
                             staticClass:
                               "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                           },
-                          [_vm._v("List")]
+                          [_vm._v("Item")]
                         ),
                         _vm._v(" "),
                         _c(
@@ -59182,9 +59209,9 @@ var render = function() {
                           "th",
                           {
                             staticClass:
-                              "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                              "px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                           },
-                          [_vm._v("Done")]
+                          [_vm._v("Status")]
                         ),
                         _vm._v(" "),
                         _c(
@@ -59242,7 +59269,23 @@ var render = function() {
                                   {
                                     staticClass: "px-6 py-4 whitespace-nowrap"
                                   },
-                                  [_vm._v(_vm._s(task.status))]
+                                  [
+                                    _c("jet-select", {
+                                      attrs: { options: _vm.levels.data },
+                                      model: {
+                                        value: _vm.addTaskForm.level_id,
+                                        callback: function($$v) {
+                                          _vm.$set(
+                                            _vm.addTaskForm,
+                                            "level_id",
+                                            $$v
+                                          )
+                                        },
+                                        expression: "addTaskForm.level_id"
+                                      }
+                                    })
+                                  ],
+                                  1
                                 ),
                                 _vm._v(" "),
                                 _c(
@@ -59263,8 +59306,28 @@ var render = function() {
                                         }
                                       },
                                       [
-                                        _vm._v(
-                                          "\n                                        Edit\n                                    "
+                                        _c(
+                                          "svg",
+                                          {
+                                            attrs: {
+                                              xmlns:
+                                                "http://www.w3.org/2000/svg",
+                                              fill: "none",
+                                              viewBox: "0 0 24 24",
+                                              stroke: "currentColor"
+                                            }
+                                          },
+                                          [
+                                            _c("path", {
+                                              attrs: {
+                                                "stroke-linecap": "round",
+                                                "stroke-linejoin": "round",
+                                                "stroke-width": "2",
+                                                d:
+                                                  "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                                              }
+                                            })
+                                          ]
                                         )
                                       ]
                                     ),
@@ -59273,7 +59336,7 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "bg-red-600 hover:bg-red-400 text-xs text-white font-semi-bold py-2 px-4 rounded transition ease-in-out duration-150",
+                                          "bg-red-600 hover:bg-red-400 py-2 px-4 rounded transition ease-in-out duration-150",
                                         on: {
                                           click: function($event) {
                                             return _vm.confirmTaskDeletion(task)
@@ -59281,8 +59344,28 @@ var render = function() {
                                         }
                                       },
                                       [
-                                        _vm._v(
-                                          "\n                                        Delete\n                                    "
+                                        _c(
+                                          "svg",
+                                          {
+                                            attrs: {
+                                              xmlns:
+                                                "http://www.w3.org/2000/svg",
+                                              fill: "none",
+                                              viewBox: "0 0 24 24",
+                                              stroke: "currentColor"
+                                            }
+                                          },
+                                          [
+                                            _c("path", {
+                                              attrs: {
+                                                "stroke-linecap": "round",
+                                                "stroke-linejoin": "round",
+                                                "stroke-width": "2",
+                                                d:
+                                                  "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                              }
+                                            })
+                                          ]
                                         )
                                       ]
                                     )
@@ -59294,10 +59377,10 @@ var render = function() {
                               _c(
                                 "td",
                                 {
-                                  staticClass: "border px-8 py-2",
-                                  attrs: { colspan: "2" }
+                                  staticClass: "border px-8 py-2 ",
+                                  attrs: { colspan: "6" }
                                 },
-                                [_vm._v("No Tasks")]
+                                [_vm._v("No Tasks ")]
                               )
                             ])
                       ],
@@ -59305,7 +59388,18 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c("inertia-table")
+                  _c("inertia-table", {
+                    attrs: {
+                      data: _vm.tasks.data,
+                      id: "id",
+                      order: _vm.order,
+                      filters: _vm.filters,
+                      columns: _vm.columns,
+                      routeName: "tasks",
+                      createLink: "tasks.create"
+                    },
+                    on: { "item-selected": _vm.updateTaskDialog }
+                  })
                 ],
                 1
               ),
